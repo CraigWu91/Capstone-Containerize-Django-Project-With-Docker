@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    {% load static %}
+    {% csrf_token %}
+    <style>
+        img {
+            width: 300px;
+            height: 100px;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        p {
+        font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="display-6 text-center m-4">Craig Cuisine</h1>
+            <p class="m-4 text-center">Welcome to the food delivery service of your dreams. Since 2023 Craig Cuisine is an online food delivery service that delivers high quality food right to your doorstep.
+            Choose from a wide range of cuisines from all around the world and enjoy them right at the comfort of your own home. Rated best restaurant in the world by Rordon Gamsey, trust us.</p>
+        </div>
+        <div class="col-md-2 my-5 navbar navbar-expand-md">
+            <button onclick="window.location.href='/user_auth/user_login'" class="m-1 btn btn-outline-primary">Register</button><button onclick="window.location.href='/user_auth/user_login'" class="m-1 btn btn-outline-primary">Login</button>
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/amanda-lim-HgeEMxAuI6E-unsplash.jpg' %}" class="img-fluid" alt="Hotdog">
+            <h5 class="text-capitalize text-dark m-1">hotdog - R650</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/chad-montano--GFCYhoRe48-unsplash.jpg' %}" class="img-fluid" alt="Hamburger">
+            <h5 class="text-capitalize text-dark m-1">hamburger - R5</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/sunorwind-Z4CvBOpOi6w-unsplash.jpg' %}" class="img-fluid" alt="Steak">
+            <h5 class="text-capitalize text-dark m-1">Steak - R10</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/andy-hay-ZN-TT10kf4o-unsplash.jpg' %}" class="img-fluid" alt="Curry">
+            <h5 class="text-capitalize text-dark m-1">Curry - R299</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/giovanna-gomes-on2t2s6qkj4-unsplash.jpg' %}" class="img-fluid" alt="Sushi">
+            <h5 class="text-capitalize text-dark m-1">Sushi - R30</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/nadine-primeau--ftWfohtjNw-unsplash.jpg' %}" class="img-fluid" alt="Salad">
+            <h5 class="text-capitalize text-dark m-1">Salad - R3</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/sheri-silver-5A0O12BIsjY-unsplash.jpg' %}" class="img-fluid" alt="Ice Cream">
+            <h5 class="text-capitalize text-dark m-1">Ice Cream - R180</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/katie-rosario-QNyRp21hb5I-unsplash.jpg' %}" class="img-fluid" alt="Cake">
+            <h5 class="text-capitalize text-dark m-1">Cake - R280</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/shenggeng-lin-XoN3v3Ge7EE-unsplash.jpg' %}" class="img-fluid" alt="Mojito">
+            <h5 class="text-capitalize text-dark m-1">Mojito - R2</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+        <div class="col-md-5 text-center my-6">
+            <img src="{% static 'assets/alexander-mils-pPhN8HFzkDE-unsplash.jpg' %}" class="img-fluid" alt="Smoothie">
+            <h5 class="text-capitalize text-dark m-1">Smoothie - R300</h5>
+            <button class="m-1 btn btn-outline-dark">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container mt-5">
+        <br>
+        <div class="row">
+            <div class="col-md-2 mx-auto">
+                <img src="{% static 'assets/nico-smit-2M6ewSjbo60-unsplash.jpg' %}" class="img-fluid" alt="Logo">
+            </div>
+            <div class="col-md-10 my-6">
+                <form>
+                    <h3>Sign Up For Our Newsletter</h3>
+                    <br>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" style="position:relative; right:10px">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>
+{% endblock %}
