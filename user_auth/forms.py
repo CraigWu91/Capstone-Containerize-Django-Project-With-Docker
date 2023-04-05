@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django import forms
 
 class RegisterUserForm(UserCreationForm):
+    '''
+    A form used for registering a new user. 
+
+    param: UserCreationForm: Uses Django built in UserCreationForm
+    '''
     first_name = forms.CharField(max_length=50)
     last_name = forms.CharField(max_length=50)
 
