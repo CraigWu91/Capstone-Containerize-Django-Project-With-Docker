@@ -1,5 +1,5 @@
 # Overview
-The dockerfile will install all the pre=requisites to get the web app working. "python manage.py runserver 0.0.0.0:8000" will map the port from the container to your local computer with the URL http://127.0.0.1:8000/
+The dockerfile will install all the pre-requisites to get the web app working. "python manage.py runserver 0.0.0.0:8000" will map the port from the container to your local computer with the URL http://127.0.0.1:8000/
 
 # Instructions
 * To run the mySite web application using Docker make sure you have Docker installed https://docs.docker.com/get-docker/
