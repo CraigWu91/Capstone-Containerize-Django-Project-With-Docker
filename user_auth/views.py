@@ -11,9 +11,23 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def user_login(request):
+    """
+    Renders the login page
+
+    param: request: Http request
+
+    return: Http response of login html
+    """
     return render(request, 'authentication/login.html')
 
 def authenticate_user(request):
+    """
+    Authenticates the user based on submitted credentails
+
+    param: request: Http request
+
+    return: login and polls page
+    """
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(username=username, password=password)
@@ -26,6 +40,10 @@ def authenticate_user(request):
         return HttpResponseRedirect('/polls')
     
 def show_user(request):
+    """
+    Shows the user page displaying username and password. This is for testing purposes and not actually used
+
+    """
     username = request.user.username
     password = request.user.password
     return render(request, 'authentication/user.html', {
@@ -34,6 +52,13 @@ def show_user(request):
     })
 
 def register(request):
+    """
+    Shows the registration page and handles the registration
+
+    param: request: Http request
+
+    return: Http response
+    """
     if request.method == 'POST':
         form = RegisterUserForm(request.POST)
         if form.is_valid():
